@@ -1,4 +1,6 @@
-﻿If(!(test-path $PSScriptRoot\Data))
+# Developed by SnazzyDuckling #
+###############################
+If(!(test-path $PSScriptRoot\Data))
 {
       New-Item -ItemType Directory -Force -Path $PSScriptRoot\Data
 }
@@ -19,7 +21,7 @@ $PatternFinal = "Teamkilled $offender"
 Get-Content "$PSScriptRoot\Data\FilterPass2.txt" | Where-Object { $_ -notmatch $PatternFinal } | Set-Content "$PSScriptRoot\Data\FilterPass3.txt" -Force
 $Pattern = "TeamKilled"
 Get-Content "$PSScriptRoot\Data\FilterPass3.txt" | Where-Object { $_ -match $Pattern } | Out-File "$PSScriptRoot\Data\TeamkillPass1.txt" -Force
-$hash = @{}      # define a new empty hash table
+$hash = @{}
 get-content "$PSScriptRoot\Data\TeamkillPass1.txt" | %{if($hash.$_ -eq $null) { $_ }; $hash.$_ = 1} > $PSScriptRoot\Data\TeamkillTotal.txt
 cls
 $FileContent = Get-Content "$PSScriptRoot\Data\TeamkillTotal.txt"
