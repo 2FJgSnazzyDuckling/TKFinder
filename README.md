@@ -19,7 +19,7 @@ Powershell 3.0 or higher. (Update here https://www.microsoft.com/en-us/download/
 Unzip the files to any place you'd like.
 
 Grab your PostScriptum.log or any of your backup logs from your server and put it with the RUN.bat & TKFinder.ps1 file.
-Run the RUN.bat file (preferably as administrator) and enter the username. It has to be the full correct name and length (it's not case sensitive).
+Run the RUN.bat file (preferably as administrator) and select the game for which you wanna search, then enter the username. It has to be the full correct name and length (it's not case sensitive).
 The script will take your log file and assemble it into various filter step where it sorts out the garbage leaving you with the TeamkillPass1.txt which contains detailed information
 on the teamkiller aswell as a TeamkillTotal.txt file containing the list of all players teamkilled.
 
